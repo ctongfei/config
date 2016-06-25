@@ -1,5 +1,5 @@
 name := "config"
-version := "0.1.0-SNAPSHOT"
+version := "0.1.2-SNAPSHOT"
 scalaVersion := "2.11.8"
 organization := "me.tongfei"
 isSnapshot := true

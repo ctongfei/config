@@ -18,7 +18,7 @@ object Config extends DefaultMap[String, String] {
 
   def loadPropertiesFromResource(propFileName: String) = {
     val newProperties = new Properties
-    val istr = getClass.getClassLoader.getResourceAsStream(propFileName)
+    val istr = getClass.getResourceAsStream(propFileName)
     if (istr != null) {
       newProperties.load(istr)
       for (e ← newProperties.entrySet)
@@ -46,7 +46,7 @@ object Config extends DefaultMap[String, String] {
 
 
   // DEFAULT LOADING BEHAVIOR ON OBJECT CREATION:
-  loadPropertiesFromResource("./config.properties")
+  loadPropertiesFromResource("/config.properties")
   loadSystemProperties()
 
   // CONFORMING TO A MAP
